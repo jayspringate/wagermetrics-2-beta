@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="no-js" lang="eng">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wagermetrics</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link href='http://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/modules.css">
+    <link rel="stylesheet" type="text/css" href="css/layout1.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script src="scripts/jquery.js"></script>
+  </head>
+  <body class="container_16 clearfix">
+    <main>
+    <header class="header">
+        Wagermetrics
+    </header>
+    <h1 class="grid_5 push_6 subheading">Trend Analyzer</h1>
+      <form class="homeTeam">
+        <select name="homeTeam" id="team" class="grid_6 push_5">
+          <option value="blank" selected="selected">Team</option>
+          <option value="ATL">Atlanta Hawks</option>
+          <option value="BOS">Boston Celtics</option>
+          <option value="BK">Brooklyn Nets</option>
+          <option value="CHAR">Charlotte Hornets</option>
+          <option value="CHI">Chicago Bulls</option>
+          <option value="CLE">Cleveland Cavaliers</option>
+          <option value="DAL">Dallas Mavericks</option>
+          <option value="DEN">Denver Nuggets</option>
+          <option value="DET">Detroit Pistons</option>
+          <option value="GS">Golden State Warriors</option>
+          <option value="HOU">Houston Rockets</option>
+          <option value="IND">Indiana Pacers</option>
+          <option value="LAC">Los Angeles Clippers</option>
+          <option value="LAL">Los Angeles Lakers</option>
+          <option value="MEM">Memphis Grizzlies</option>
+          <option value="MIA">Miami Heat</option>
+          <option value="MIL">Milwaukee Bucks</option>
+          <option value="MIN">Minnesota Timberwolves</option>
+          <option value="NO">New Orleans Pelicans</option>
+          <option value="NY">New York Knicks</option>
+          <option value="OKC">Oklahoma City Thunder</option>
+          <option value="ORL">Orlando Magic</option>
+          <option value="PHI">Philadelphia 76ers</option>
+          <option value="PHO">Phoenix Suns</option>
+          <option value="POR">Portland Trail Blazers</option>
+          <option value="SAC">Sacramento Kings</option>
+          <option value="SA">San Antonio Spurs</option>
+          <option value="TOR">Toronto Raptors</option>
+          <option value="UTA">Utah Jazz</option>
+          <option value="WAS">Washington Wizards</option>
+        </select>
+      </form>
+       <form class="roadTeam dropDown">
+        <select name="roadTeam" value="blank" id="opponent" class="grid_6 push_5">
+          <option value="blank" selected="selected">Opponent</option>
+          <option value="ATL">Atlanta Hawks</option>
+          <option value="BOS">Boston Celtics</option>
+          <option value="BK">Brooklyn Nets</option>
+          <option value="CHAR">Charlotte Hornets</option>
+          <option value="CHI">Chicago Bulls</option>
+          <option value="CLE">Cleveland Cavaliers</option>
+          <option value="DAL">Dallas Mavericks</option>
+          <option value="DEN">Denver Nuggets</option>
+          <option value="DET">Detroit Pistons</option>
+          <option value="GS">Golden State Warriors</option>
+          <option value="HOU">Houston Rockets</option>
+          <option value="IND">Indiana Pacers</option>
+          <option value="LAC">Los Angeles Clippers</option>
+          <option value="LAL">Los Angeles Lakers</option>
+          <option value="MEM">Memphis Grizzlies</option>
+          <option value="MIA">Miami Heat</option>
+          <option value="MIL">Milwaukee Bucks</option>
+          <option value="MIN">Minnesota Timberwolves</option>
+          <option value="NO">New Orleans Pelicans</option>
+          <option value="NY">New York Knicks</option>
+          <option value="OKC">Oklahoma City Thunder</option>
+          <option value="ORL">Orlando Magic</option>
+          <option value="PHI">Philadelphia 76ers</option>
+          <option value="PHO">Phoenix Suns</option>
+          <option value="POR">Portland Trail Blazers</option>
+          <option value="SAC">Sacramento Kings</option>
+          <option value="SA">San Antonio Spurs</option>
+          <option value="TOR">Toronto Raptors</option>
+          <option value="UTA">Utah Jazz</option>
+          <option value="WAS">Washington Wizards</option>
+        </select>
+      </form>
+      <form class="homeRoad dropDown">
+        <select name="homeAndRoad" id="court" class="grid_6 push_5">
+          <option value="blank" selected="selected">Court</option>
+          <option value="home">Home</option>
+          <option value="road">Road</option>
+        </select>
+      </form>
+      <form class="favUnder dropDown">
+        <select name="favUnder" id="favorite" class="grid_6 push_5">
+          <option value="blank">Status</option>
+          <option value="favorite">Favorite</option>
+          <option value="underdog">Underdog</option>
+        </select>
+      </form>
+      <form class="spread dropDown">
+       <select name="spread" id="spread" class="grid_6 push_5">
+        <option value="blank" selected="selected">Spread</option>
+        <option value="-20">-20</option>
+        <option value="-19.5">-19.5</option>
+        <option value="-19">-19</option>
+        <option value="-18.5">-18.5</option>
+        <option value="-18">-18</option>
+        <option value="-17.5">-17.5</option>
+        <option value="-17">-17</option>
+        <option value="-16.5">-16.5</option>
+        <option value="-16">-16</option>
+        <option value="-15.5">-15.5</option>
+        <option value="-15">-15</option>
+        <option value="-14.5">-14.5</option>
+        <option value="-14">-14</option>
+        <option value="-13.5">-13.5</option>
+        <option value="-13">-13</option>
+        <option vale="-12.5">-12.5</option>
+        <option value="-12">-12</option>
+        <option value="-11.5">-11.5</option>
+        <option value="-11">-11</option>
+        <option value="-10.5">-10.5</option>
+        <option value="-10">-10</option>
+        <option value="-9.5">-9.5</option>
+        <option value="-9">-9</option>
+        <option value="-8.5">-8.5</option>
+        <option value="-8">-8</option>
+        <option value="-7.5">-7.5</option>
+        <option value="-7">-7</option>
+        <option value="-6.5">-6.5</option>
+        <option value="-6">-6</option>
+        <option value="-5.5">-5.5</option>
+        <option value="-5">-5</option>
+        <option value="-4.5">-4.5</option>
+        <option value="-4">-4</option>
+        <option value="-3.5">-3.5</option>
+        <option value="-3">-3</option>
+        <option value="-2.5">-2.5</option>
+        <option value="-2">-2</option>
+        <option value="-1.5">-1.5</option>
+        <option value="-1">-1</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="1.5">1.5</option>
+        <option value="2">2</option>
+        <option value="2.5">2.5</option>
+        <option value="3">3</option>
+        <option value="3.5">3.5</option>
+        <option value="4">4</option>
+        <option value="4.5">4.5</option>
+        <option value="5">5</option>
+        <option value="5.5">5.5</option>
+        <option value="6">6</option>
+        <option value="6.5">6.5</option>
+        <option value="7">7</option>
+        <option value="7.5">7.5</option>
+        <option value="8">8</option>
+        <option value="8.5">8.5</option>
+        <option value="9">9</option>
+        <option value="9.5">9.5</option>
+        <option value="10">10</option>
+        <option value="10.5">10.5</option>
+        <option value="11">11</option>
+        <option value="11.5">11.5</option>
+        <option value="12">12</option>
+        <option value="12.5">12.5</option>
+        <option value="13">13</option>
+        <option value="13.5">13.5</option>
+        <option value="14">14</option>
+        <option value="14.5">14.5</option>
+        <option value="15">15</option>
+        <option value="15.5">15.5</option>
+        <option value="16">16</option>
+        <option value="16.5">16.5</option>
+        <option value="17">17</option>
+        <option value="17.5">17.5</option>
+        <option value="18">18</option>
+        <option value="18.5">18.5</option>
+        <option value="19">19</option>
+        <option value="19.5">19.5</option>
+        <option value="20">20</option>
+       </select>
+      </form>
+      <button id='testClick' class="grid_2 push_7">Get Results</button>
+      <div id="teamLogo" class ='nba'></div>
+      <table class="resultsTable" id='winLossTable'>
+        <tr>
+          <td>Record</td>
+          <td>Win %</td>
+        </tr>
+        <tr>
+          <td id='record'></td>
+          <td id='winPercent'></td>
+        </tr>
+      </table>
+      <table class='resultsTable' id='overUnderTable'>
+        <tr>
+          <td>Over</td>
+          <td>Under</td>
+          <td>Over %</td>
+          <td>Under %</td>
+          <td>Push</td>
+        </tr>
+        <tr>
+          <td id='overCount'></td>
+          <td id='underCount'></td>
+          <td id='overPercent'></td>
+          <td id='underPercent'></td>
+          <td id='pushCount'></td>
+        </tr>
+      </table>
+      <h1 class="break-even grid_5 push_4"> -110 break-even: 52.4% </h1>
+      <h1 class="break-even grid_5 push_3"> -105 break-even: 51.2% </h1>
+      <script src="scripts/gameData.js"></script>
+      <script src="scripts/dataAdjust.js"></script>
+      <script src="scripts/sort.js"></script>
+    </main>
+    <section>
+      <table id='gamesTable' class='resultsTable'>
+        <tr>
+          <td>Opponent</td>
+          <td>Result</td>
+          <td>Score</td>
+          <td>Odds</td>
+          <td>Court</td>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+body {
+	background-image:url(http://allthingssports.com/wp-content/uploads/2012/11/NBA-Page-Background1.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-width: 100%;
+	background-height: 100%;
+	margin: 0;
+
+}
+.header {
+	font-family: 'Yesteryear';
+	font-size: 75px;
+	text-align: center;
+	padding:15px 0;
+	width: 430px;
+	margin: auto;
+	border:#87adde;
+	border-style:ridge;
+}
+nav {
+	display:-webkit-inline-box;
+	display:-moz-inline-box;
+}
+.navBar {
+	padding:25px 0;
+}
+.homeTeam {
+	padding: 10px;
+}
+.dropDown {
+	padding: 0 10px;
+}
+button {
+	display: list-item;
+	margin:auto;
+}
+#resultsTable {
+	font-size:12px;
+	color:black;
+	width:50%;
+	border-width: 1px;
+	border-color: #729ea5;
+	border-collapse: collapse;
+	margin:auto;
+}
+#resultsTable th {
+	font-size:12px;
+	background-color:#87adde;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #87adde;
+	text-align:left;
+}
+#resultsTable tr {
+	background-color:#afc8e9;
+}
+#resultsTable td {
+	font-size:12px;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #87adde;
+}
+#resultsTable tr:hover {
+	background-color:#deb887;
+}
+
+#teamLogo {
+	height: 100px;
+	width: 100px;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.nba {
+	background-image: url(../img/nba.gif);
+}
+.ATL {
+	background-image: url(../img/atl.gif);
+}
+
+.BK {
+	background-image: url(../img/bk.gif);
+}
+
+.BOS {
+	background-image: url(../img/bos.gif);
+}
+
+.CHAR {
+	background-image: url(../img/cha.gif);
+}
+
+.CHI {
+	background-image: url(../img/chi.gif);
+}
+
+.CLE {
+	background-image: url(../img/cle.gif);
+}
+
+.DAL {
+	background-image: url(../img/dal.gif);
+}
+
+.DEN {
+	background-image: url(../img/den.gif);
+}
+
+.DET {
+	background-image: url(../img/det.gif);
+}
+
+.GS {
+	background-image: url(../img/gs.gif);
+}
+
+.HOU {
+	background-image: url(../img/hou.gif);
+}
+
+.IND {
+	background-image: url(../img/ind.gif);
+}
+
+.LAC {
+	background-image: url(../img/lac.gif);
+}
+
+.LAL {
+	background-image: url(../img/lal.gif);
+}
+
+.MEM {
+	background-image: url(../img/mem.gif);
+}
+
+.MIA {
+	background-image: url(../img/mia.gif);
+}
+
+.MIL {
+	background-image: url(../img/mil.gif);
+}
+
+.MIN {
+	background-image: url(../img/min.gif);
+}
+
+.NO {
+	background-image: url(../img/no.gif);
+}
+
+.NY {
+	background-image: url(../img/ny.gif);
+}
+
+.OKC {
+	background-image: url(../img/okc.gif);
+}
+
+.ORL {
+	background-image: url(../img/orl.gif);
+}
+
+.PHI {
+	background-image: url(../img/phi.gif);
+}
+
+.PHO {
+	background-image: url(../img/phx.gif);
+}
+
+.POR {
+	background-image: url(../img/por.gif);
+}
+
+.SA {
+	background-image: url(../img/sa.gif);
+}
+
+.SAC {
+	background-image: url(../img/sac.gif);
+}
+
+.TOR {
+	background-image: url(../img/tor.gif);
+}
+
+.UTA {
+	background-image: url(../img/uta.gif);
+}
+
+.WAS {
+	background-image: url(../img/was.gif);
+}
