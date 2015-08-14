@@ -1,0 +1,23 @@
+table {
+  text-align: center;
+}
+
+th {
+  text-align: center;
+  padding: 10px;
+}
+
+tr {
+    
+    border: 3px solid gray;
+    padding: 10px;
+    
+    
+}
+
+td {
+    
+    border: 1px solid gray;
+    padding: 10px;
+    
+} 
