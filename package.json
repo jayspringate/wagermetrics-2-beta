@@ -1,25 +1,46 @@
 {
-  "name": "group-capstone-project",
-  "version": "1.0.0",
+  "name": "wagermetrics-beta",
+  "version": "0.1.0",
+  "private": true,
   "description": "nba data aggregator",
-  "main": "index.js",
+  "main": "server.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha test/**/*test.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jayspringate/group-capstone-project.git"
+    "url": "https://github.com/jayspringate/wagermetrics-beta.git"
   },
-  "author": "Jay Springate",
-  "license": "ISC",
+  "author": "jay.springate@gmail.com",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jayspringate/group-capstone-project/issues"
+    "url": "https://github.com/jayspringate/wagermetrics-beta/issues"
   },
-  "homepage": "https://github.com/jayspringate/group-capstone-project",
+  "homepage": "https://github.com/jayspringate/wagermetrics-beta",
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "chai-http": "^1.0.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-webpack": "^1.0.11",
+    "mocha": "^2.2.4",
+    "superagent": "^1.2.0",
+    "superagent-cli": "^2.0.0",
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
+  },
   "dependencies": {
-    "express": "^4.11.1"
+    "body-parser": "^1.13.3",
+    "express": "^4.12.3",
+    "pg": "^4.4.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.4.1"
   }
 }
