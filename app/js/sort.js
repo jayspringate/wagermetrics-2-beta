@@ -1,5 +1,10 @@
+'use strict';
+
+var $ = require('jquery');
+var gameData = require('dataAdjust');
+
 $(function () {
-		
+
 	$('#testClick').on('click', function () {
 		var property 					= [];
 		var selection 				= [];
@@ -12,7 +17,7 @@ $(function () {
 		var underCount 				= 0;
 		var pushTotalCount 		= 0;
 
-//remove classes and empty elements to reset click 
+//remove classes and empty elements to reset click
     $(".selected").removeClass("selected");
     $('.temp').empty();
     if ($('#team').val() != 'blank') {
@@ -33,17 +38,23 @@ $(function () {
     	selection[index] = $(this).val();
     });
 
-    for (i=0; i < property.length; i++) {
-      function gameFilter(element) {
-    		if (element[property[i]] == selection[i]) {
-    		return element;
-    	}
-    }
-    filteredGames = filteredGames.filter(gameFilter);
+
+    function gameFilter(element, i) {
+      if (element[property[i]] == selection[i]) {
+        return element;
+      }
     }
 
+    function filterLoop () {
+     for (var i=0; i < property.length; i++) {
+      filteredGames = filteredGames.filter(gameFilter);
+      }
+    }
+
+    filterLoop();
+
   	function gradeCount() {
-  		for (i=0; i < filteredGames.length; i++) {
+  		for (var i=0; i < filteredGames.length; i++) {
   			if (filteredGames[i].grade == "win") {
   				winCount++;
   			} else if (filteredGames[i].grade == "loss") {
@@ -52,12 +63,13 @@ $(function () {
   				pushCount++;
   			}
   		}
-  		
-  	};
+
+  	}
+
     gradeCount();
 
   	function totalGradeCount() {
-  		for (i=0; i < filteredGames.length; i++) {
+  		for (var i=0; i < filteredGames.length; i++) {
   			if (filteredGames[i].totalGrade == "over") {
   				overCount++;
   			} else if (filteredGames[i].totalGrade == "under") {
@@ -66,7 +78,7 @@ $(function () {
   				pushTotalCount++;
   			}
   		}
-  	};
+  	}
 
     totalGradeCount();
 
@@ -87,7 +99,7 @@ $(function () {
           percentWin = numberCheck + "%";
         }
       };
-      
+
       var overPercentage = function () {
         var overCheck = Math.round(100 * (overCount/(overCount + underCount) * 10)) /10;
         if (isNaN(overCheck)) {
@@ -109,7 +121,7 @@ $(function () {
       winPercentage();
       overPercentage();
       underPercentage();
-        
+
       $tableHead = $('.selected option:selected').text();
       $('#tableInfo').text($tableHead);
       $('#record').text(winCount + "-" + lossCount + "-" + pushCount);
@@ -127,7 +139,7 @@ $(function () {
 
     };
     tableBuild();
-        $table = $('#gamesTable');
+        var $table = $('#gamesTable');
         $(filteredGames).each(function () {
               $table += "<tr class='temp'>";
               $table += "<td>" + this.opponent + "</td>";
@@ -142,5 +154,5 @@ $(function () {
 
   });
 });
-								
-		
+
+
