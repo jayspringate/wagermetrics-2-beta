@@ -1,19 +1,19 @@
 'use strict';
 
-var playerList = document.getElementById('playerList');
+var gamesList = document.getElementById('gamesList');
 
 var request = require('request');
 
 request
-  .get('/api/players')
+  .get('/api/games')
   .end(function(err, res) {
     if (err) return console.log(err);
-    var players = JSON.parse(res.text);
+    var games = JSON.parse(res.text);
 
-    players.forEach(function(player) {
-      var playerEl = document.createElement('li');
-      playerEl.innerHTML = player.name;
-      playerList.appendChild(playerEl);
+    games.forEach(function(game) {
+      var gameEl = document.createElement('li');
+      gameEl.innerHTML = game.name;
+      gamesList.appendChild(gameEl);
 
     });
   });
