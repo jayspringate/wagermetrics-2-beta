@@ -1,7 +1,7 @@
 'use strict';
 
 var Sql = require('sequelize');
-var sql = new Sql('wagermetrics_dev', 'wagermetrics_dev', 'prince', {
+var sql = new Sql(process.env.PGDATABASE, process.env.PGUSER, process.env.PGPASSWORD, {
   dialect: 'postgres'
 });
 var Game = require('../models/Game');

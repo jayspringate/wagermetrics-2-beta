@@ -1,8 +1,6 @@
 'use strict';
 
 module.exports = function(grunt) {
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-simple-mocha');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-webpack');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -65,14 +63,14 @@ module.exports = function(grunt) {
         output: {
           path: 'build/',
           file: 'bundle.js'
-        }
-      },
+        },
 
-      test: {
-        entry: __dirname + '/test/client/test.js',
-        output: {
-          path: 'test/client/',
-          file: 'bundle.js'
+        target: 'node',
+
+        module: {
+          loaders: [{
+            test: /\.json$/, loader: 'json'
+          }]
         }
       }
     },
@@ -96,6 +94,5 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('build:dev', ['webpack:client', 'copy:html']);
-  grunt.registerTask('test', ['jshint', 'mocha']);
   grunt.registerTask('default', ['build:dev']);
 };
