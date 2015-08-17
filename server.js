@@ -2,11 +2,17 @@
 
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 3000;
 
-app.use(express.static(__dirname + '/app'));
+process.env.APP_SECRET = process.env.APP_SECRET || 'unicornrainbow';
 
-app.listen(port, function() {
-console.log('Hi!' + port);
+var gameRoutes = express.Router();
+
+app.use(express.static(__dirname + '/build'));
+
+require('./routes/game-routes')(gameRoutes);
+
+app.use('/api', gameRoutes);
+
+app.listen(process.env.PORT || 3000, function() {
+  console.log('server running on port ' + (process.env.PORT || 3000));
 });
-

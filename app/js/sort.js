@@ -1,7 +1,6 @@
 'use strict';
 
 var $ = require('jquery');
-var gameData = require('dataAdjust');
 
 $(function () {
 
@@ -9,7 +8,7 @@ $(function () {
 		var property 					= [];
 		var selection 				= [];
 		var element;
-		var filteredGames 		= gameData;
+		var filteredGames 		= [];   //this used to be gameData from gameDataArray
 		var winCount 					= 0;
 		var lossCount 				= 0;
 		var pushCount 				= 0;
