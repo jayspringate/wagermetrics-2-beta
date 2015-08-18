@@ -6,11 +6,7 @@
     <title>Wagermetrics</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/base.css">
     <link href='http://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="css/modules.css">
-    <link rel="stylesheet" type="text/css" href="css/layout1.css">
-    <link rel="stylesheet" href="css/animate.min.css">
   </head>
   <body class="container_16 clearfix">
     <main>
@@ -89,7 +85,7 @@
         </select>
       </form>
       <form class="homeRoad dropDown">
-        <select name="homeAndRoad" id="court" class="grid_6 push_5">
+        <select name="homeAndRoad" id="teamCourt" class="grid_6 push_5">
           <option value="blank" selected="selected">Court</option>
           <option value="home">Home</option>
           <option value="road">Road</option>
@@ -103,7 +99,7 @@
         </select>
       </form>
       <form class="spread dropDown">
-       <select name="spread" id="spread" class="grid_6 push_5">
+       <select name="spread" id="spreadClose" class="grid_6 push_5">
         <option value="blank" selected="selected">Spread</option>
         <option value="-20">-20</option>
         <option value="-19.5">-19.5</option>
@@ -223,11 +219,11 @@
           <td>Opponent</td>
           <td>Result</td>
           <td>Score</td>
-          <td>Odds</td>
+          <td>Spread</td>
           <td>Court</td>
         </tr>
       </table>
     </section>
-  <script src="//localhost:3000/livereload.js"></script>
+  <script src="bundle.js"></script>
   </body>
 </html>

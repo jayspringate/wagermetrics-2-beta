@@ -38,16 +38,15 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      options: {
-        livereload: 3000
-      },
-      configFiles: {
+
+      gruntfile: {
         files: ['Gruntfile.js'],
         options: {
           reload: true,
           event: ['added', 'deleted', 'changed']
         }
       },
+
       scripts: {
         files: ['*.js', 'models/**/*.js', 'app/**/*.js', 'routes/**/*.js'],
         tasks: ['default'],
@@ -64,13 +63,11 @@ module.exports = function(grunt) {
           path: 'build/',
           file: 'bundle.js'
         },
-
-        target: 'node',
-
         module: {
-          loaders: [{
-            test: /\.json$/, loader: 'json'
-          }]
+          loaders: [
+          { test: /\.css$/, loader: "style-loader!css-loader" },
+          { test: /\.(jpg|gif)$/, loader: "file-loader" }
+          ]
         }
       }
     },
