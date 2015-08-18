@@ -25,12 +25,13 @@ var Game = module.exports = sql.define ('Game', {
   suGrade: Sql.STRING,
   totalGrade: Sql.STRING,
   spreadMove: Sql.STRING,
-  totalMove: Sql.STRING
+  totalMove: Sql.STRING,
+  status: Sql.STRING
 },
 
 {
   timestamps: false,
-  tableName: 'Por1415'
+  tableName: 'NbaGames'
 });
 
 Game.sync();

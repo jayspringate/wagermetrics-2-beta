@@ -65,8 +65,6 @@ $(function () {
     var underCount        = 0;
     var pushTotalCount    = 0;
 
-    console.log(filteredGames[0]);
-
 //remove classes and empty elements to reset click
     $(".selected").removeClass("selected");
     $('.temp').empty();
@@ -88,19 +86,24 @@ $(function () {
       selection.push($(this).val());
     });
 
-    console.log(property);
-    console.log(selection);
-
     property.forEach(function (propElement, propIndex, propArr) {
      filteredGames = filteredGames.filter(function (filtElement, filtIndex, filtArr) {
-        // console.log(propElement);
-        // console.log(selection[propIndex]);
-        // console.log(filtElement);
-        // console.log(filtElement[propElement]);
-        if (filtElement[propElement] === selection[propIndex]) {
+        if (filtElement[propElement] == selection[propIndex]) {
           return filtElement;
         }
       });
+    });
+
+    filteredGames = filteredGames.sort(function(a, b) {
+      a = new Date(a.date);
+      b = new Date(b.date);
+      if (a < b) {
+        return 1;
+      } else if (a > b) {
+        return -1;
+      } else {
+        return 0;
+      }
     });
 
     function gradeCount() {
@@ -190,13 +193,18 @@ $(function () {
     tableBuild();
         var $table = $('#gamesTable');
         $(filteredGames).each(function () {
-              $table += "<tr class='temp'>";
-              $table += "<td>" + this.opponent + "</td>";
-              $table += "<td>" + this.atsGrade.toUpperCase() + "</td>";
-              $table += "<td>" + this.teamScore + '-' + this.opponentScore + "</td>";
-              $table += "<td>" + this.spreadClose + "</td>";
-              $table += "<td>" + this.teamCourt.toUpperCase() + "</td>";
-              $table += "</tr>";
+          $table += "<tr class='temp'>";
+          $table += "<td>" + this.date.split('T')[0] + "</td>";
+          $table += "<td>" + this.team + "</td>";
+          $table += "<td>" + this.teamCourt.toUpperCase() + "</td>";
+          $table += "<td>" + this.opponent + "</td>";
+          $table += "<td>" + this.teamScore + '-' + this.opponentScore + "</td>";
+          $table += "<td>" + this.suGrade + "</td>";
+          $table += "<td>" + this.spreadClose + ' (' + this.spreadOpen + ')' + "</td>";
+          $table += "<td>" + this.atsGrade + "</td>";
+          $table += "<td>" + this.totalClose + ' (' + this.totalOpen + ')' + "</td>";
+          $table += "<td>" + this.totalGrade + "</td>";
+          $table += "</tr>";
          });
             $('#gamesTable').append($table);
             $('#gamesTable').addClass('resultsTable');
