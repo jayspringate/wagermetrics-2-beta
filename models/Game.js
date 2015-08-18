@@ -1,8 +1,8 @@
 'use strict';
 
 var Sql = require('sequelize');
-var sql = new Sql('wagermetrics_dev', 'wagermetrics_dev',
-  'prince', {dialect: 'postgres'});
+var sql = new Sql(process.env.PGDATABASE, process.env.PGUSER,
+  process.env.PGPASSWORD, {dialect: 'postgres'});
 
 var Game = module.exports = sql.define ('Game', {
   date: Sql.DATEONLY,
