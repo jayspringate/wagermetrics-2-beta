@@ -192,7 +192,11 @@ $(function () {
     };
     tableBuild();
         var $table = $('#gamesTable');
-        $(filteredGames).each(function () {
+        $(filteredGames).each(function (index, value) {
+          if (index === 100) {
+            return false;
+          }
+
           $table += "<tr class='temp'>";
           $table += "<td>" + this.date.split('T')[0] + "</td>";
           $table += "<td>" + this.team + "</td>";
