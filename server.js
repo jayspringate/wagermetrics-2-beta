@@ -4,6 +4,19 @@ var express = require('express');
 var app = express();
 var pg = require('pg');
 
+var pg = require('pg');
+
+pg.connect(process.env.DATABASE_URL, function(err, client) {
+  if (err) throw err;
+  console.log('Connected to postgres! Getting schemas...');
+
+  client
+    .query('SELECT * FROM "NbaGames";')
+    .on('row', function(row) {
+      console.log(JSON.stringify(row));
+    });
+});
+
 process.env.APP_SECRET = process.env.APP_SECRET || 'unicornrainbow';
 
 var gameRoutes = express.Router();
