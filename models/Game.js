@@ -1,7 +1,7 @@
 'use strict';
 
 var Sql = require('sequelize');
-var sql = new Sql(process.env.DATABASE_URL, {dialect: 'postgres'});
+var sql = new Sql(process.env.DATABASE_URL, {dialect: 'postgres', dialectOptions: {ssl: true}});
 
 var Game = module.exports = sql.define ('Game', {
   date: Sql.DATEONLY,
