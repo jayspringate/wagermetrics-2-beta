@@ -2,7 +2,6 @@
 
 var request = require('superagent');
 require("script!./jquery.js");
-require('./../css/style.css');
 require('./../css/base.css');
 require('./../css/modules.css');
 require('./../css/reset.css');
@@ -205,8 +204,10 @@ $(function () {
           $table += "<td>" + this.teamScore + '-' + this.opponentScore + "</td>";
           $table += "<td>" + this.suGrade + "</td>";
           $table += "<td>" + this.spreadClose + ' (' + this.spreadOpen + ')' + "</td>";
+          $table += "<td>" + this.spreadMove + "</td>";
           $table += "<td>" + this.atsGrade + "</td>";
           $table += "<td>" + this.totalClose + ' (' + this.totalOpen + ')' + "</td>";
+          $table += "<td>" + this.totalMove + "</td>";
           $table += "<td>" + this.totalGrade + "</td>";
           $table += "</tr>";
          });
