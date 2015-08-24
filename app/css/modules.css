@@ -41,8 +41,8 @@ height: 40px;
 }
 
 select {
-	 -webkit-appearance: menulist-button;
-	 -moz-appearance: menulist-button;
+/*	 -webkit-appearance: menulist-button;
+	 -moz-appearance: menulist-button;*/
 	height: 30px;
 	font-size: 18px;
 }
