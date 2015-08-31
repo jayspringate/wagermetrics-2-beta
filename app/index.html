@@ -15,7 +15,7 @@
     </header>
     <h1 class="grid_5 push_6 subheading">Trend Analyzer</h1>
       <form class="homeTeam">
-        <select name="homeTeam" id="team" class="grid_6 push_5">
+        <select autocomplete='off' name="homeTeam" id="team" class="grid_6 push_5">
           <option value="blank" selected="selected">Team</option>
           <option value="ATL">Atlanta Hawks</option>
           <option value="BOS">Boston Celtics</option>
@@ -50,14 +50,14 @@
         </select>
       </form>
       <form class="homeRoad dropDown">
-        <select name="homeAndRoad" id="teamCourt" class="grid_6 push_5">
+        <select autocomplete='off' name="homeAndRoad" id="teamCourt" class="grid_6 push_5">
           <option value="blank" selected="selected">Court</option>
           <option value="home">Home</option>
           <option value="road">Road</option>
         </select>
       </form>
       <form class="roadTeam dropDown">
-        <select name="roadTeam" value="blank" id="opponent" class="grid_6 push_5">
+        <select autocomplete='off' name="roadTeam" value="blank" id="opponent" class="grid_6 push_5">
           <option value="blank" selected="selected">Opponent</option>
           <option value="ATL">Atlanta Hawks</option>
           <option value="BOS">Boston Celtics</option>
@@ -92,14 +92,14 @@
         </select>
       </form>
       <form class="homeRoad dropDown">
-        <select name="homeAndRoad" id="gameType" class="grid_6 push_5">
+        <select autocomplete='off' name="homeAndRoad" id="gameType" class="grid_6 push_5">
           <option value="blank" selected="selected">Game Type</option>
           <option value="reg">Regular Season</option>
           <option value="playoff">Playoffs</option>
         </select>
       </form>
       <form class="homeRoad dropDown">
-        <select name="homeAndRoad" id="season" class="grid_6 push_5">
+        <select autocomplete='off' name="homeAndRoad" id="season" class="grid_6 push_5">
           <option value="blank" selected="selected">Season</option>
           <option value="2014-15">2014-15</option>
           <option value="2013-14">2013-14</option>
@@ -108,14 +108,14 @@
         </select>
       </form>
       <form class="favUnder dropDown">
-        <select name="favUnder" id="status" class="grid_6 push_5">
+        <select autocomplete='off' name="favUnder" id="status" class="grid_6 push_5">
           <option value="blank">Spread Status</option>
           <option value="favorite">Favorite</option>
           <option value="underdog">Underdog</option>
         </select>
       </form>
       <form class="favUnder dropDown">
-        <select name="favUnder" id="spreadMove" class="grid_6 push_5">
+        <select autocomplete='off' name="favUnder" id="spreadMove" class="grid_6 push_5">
           <option value="blank">Spread Move</option>
           <option value="FOR">For</option>
           <option value="AGAINST">Against</option>
@@ -123,7 +123,7 @@
         </select>
       </form>
       <form class="favUnder dropDown">
-        <select name="favUnder" id="totalMove" class="grid_6 push_5">
+        <select autocomplete='off' name="favUnder" id="totalMove" class="grid_6 push_5">
           <option value="blank">Total Move</option>
           <option value="UP">Up</option>
           <option value="DOWN">Down</option>
@@ -131,7 +131,7 @@
         </select>
       </form>
       <form class="spread dropDown">
-       <select name="spread" id="spreadClose" class="grid_6 push_5">
+       <select autocomplete='off' name="spread" id="spreadClose" class="grid_6 push_5">
         <option value="blank" selected="selected">Spread</option>
         <option value="-20">-20</option>
         <option value="-19.5">-19.5</option>
@@ -220,10 +220,12 @@
         <tr>
           <td>Record</td>
           <td>Win %</td>
+          <td>ROI</td>
         </tr>
         <tr>
           <td id='record'></td>
           <td id='winPercent'></td>
+          <td id='spreadRoi'></td>
         </tr>
       </table>
       <table class='resultsTable' id='overUnderTable'>
@@ -233,13 +235,17 @@
           <td>Over %</td>
           <td>Under %</td>
           <td>Push</td>
+          <td>Over ROI</td>
+          <td>Under ROI</td>
         </tr>
         <tr>
           <td id='overCount'></td>
           <td id='underCount'></td>
+          <td id='pushCount'></td>
           <td id='overPercent'></td>
           <td id='underPercent'></td>
-          <td id='pushCount'></td>
+          <td id='overRoi'></td>
+          <td id='underRoi'></td>
         </tr>
       </table>
       <h1 class="break-even grid_5 push_4"> -110 break-even: 52.4% </h1>

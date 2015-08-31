@@ -65,7 +65,6 @@ button:hover {
 }
 .resultsTable {
 	font-size:12px;
-	color:black;
 	width:50%;
 	border-width: 1px;
 	border-color: #729ea5;
@@ -79,11 +78,10 @@ button:hover {
 
 .resultsTable tr {
 	background-color: #DBDBDB;
-	opacity: 1;
 
 }
 .resultsTable td {
-	font-size:12px;
+	font-size: 12px;
 	border-width: 1px;
 	padding: 8px;
 	border-style: solid;
@@ -129,6 +127,14 @@ button:hover {
 	-webkit-animation-duration: 2s;
   -webkit-animation-delay: 0s;
   -webkit-animation-iteration-count: 1;
+}
+
+.green {
+	color: green;
+}
+
+.red {
+	color: red;
 }
 
 section {
