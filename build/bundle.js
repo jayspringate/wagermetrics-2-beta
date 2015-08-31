@@ -44,6 +44,8 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	console.log('merge-test');
+
 	var request = __webpack_require__(1);
 	__webpack_require__(4);
 
