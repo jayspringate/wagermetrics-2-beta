@@ -1,13 +1,12 @@
 
 .header {
 	font-family: 'Yesteryear';
-	font-size: 75px;
+	font-size: 80px;
 	text-align: center;
 	padding:15px 0;
-	width: 430px;
 	margin: auto;
-	border:#87adde;
-	border-style:ridge;
+	border-bottom: #87adde;
+	border-bottom-style: ridge;
 
 }
  .subheading {
