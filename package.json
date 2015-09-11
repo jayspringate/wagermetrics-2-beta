@@ -1,5 +1,5 @@
  {
-  "name": "wagermetrics-beta",
+  "name": "wagermetrics-2-beta",
   "version": "0.1.0",
   "private": true,
   "description": "nba data aggregator",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jayspringate/wagermetrics-beta.git"
+    "url": "https://github.com/jayspringate/wagermetrics-2-beta.git"
   },
   "author": "jay.springate@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jayspringate/wagermetrics-beta/issues"
+    "url": "https://github.com/jayspringate/wagermetrics-2-beta/issues"
   },
-  "homepage": "https://github.com/jayspringate/wagermetrics-beta",
+  "homepage": "https://github.com/jayspringate/wagermetrics-2-beta",
   "devDependencies": {
     "chai": "^2.3.0",
     "chai-http": "^1.0.0",
