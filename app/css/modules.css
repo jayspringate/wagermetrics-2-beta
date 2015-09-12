@@ -19,6 +19,32 @@
  	margin-right: -10px;
  }
 
+ .navBar {
+ 	height: 60px;
+ 	background-color: #003366;
+ 	font-family: 'BentonSansBold';
+ 	color: white;
+ 	font-size: 24px;
+ }
+
+ .leftNavHeader {
+ 	margin-left: 320px;
+ 	margin-top: 18px;
+ 	display: inline-block;
+ 	color: #FFE0B2;
+ }
+
+ .midNavHeader {
+	margin-left: 40px;
+	display: inline-block;
+ }
+
+ .comingSoon {
+ 	font-size: 11px;
+ 	width: 20px;
+	display: inline-block;
+ }
+
  .break-even {
  	font-size: 18px;
  	padding-left: 12px;
